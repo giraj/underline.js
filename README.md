@@ -1,4 +1,4 @@
-#UNDERLINE.js
+#Underline.js
 
 Underline.js is a fancy way to underline, removing the line under letters such as 'g', 'j', 'p' and 'q' for improved aesthetics.
 
