@@ -13,8 +13,10 @@ Specifying elements:
 NOTE: Doesn't need to be ```<h1>```.
 
 Initializing underline with defaults:
-```javascript
-var underline = new Underline('.underline');
+```html
+<script type=text/javascript>
+    var underline = new Underline('.underline');
+</script>
 ```
 
 ## Initialization options
