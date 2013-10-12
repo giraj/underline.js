@@ -6,6 +6,8 @@ Using it is as easy as adding the js and css (currently none) files to your proj
 
 Project is still in the works. Currently using ```<u>``` for underline, which is horrible. But works as a prototype. This also means the options below are currently useless.
 
+Demo page available at [jarlg.github.io/underline.js](http://jarlg.github.io/underline.js)
+
 Specifying elements:
 ```html
 <h1 class='underline'>...</h1>
