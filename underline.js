@@ -34,15 +34,34 @@ if (window.module !== undefined) {
         return false;
     }
 
+    function initChild(tag, classes) {
+        var child = document.createElement(tag);
+        if (typeof classes === 'string') {
+            child.classList.add(classes);
+        }
+        else {
+            classes.forEach(function (c) {
+                child.classList.add(c);
+            });
+        }
+        return child;
+    }
+
+    function appendTextNode(child, text) {
+        child.appendChild( document.createTextNode(text) );
+        return child;
+    }
+
     Underline.prototype = {
         defaults: {
             margin: 5,
             padding: 5,
+            color: 'black',
             noUnderline: ['g', 'j', 'y', 'p', 'q']
         },
 
         init: function (identifier, options) {
-            this.elements = document.querySelectorAll(identifier);
+            this.elements = typeof identifier === 'string' ? document.querySelectorAll(identifier) : identifier;
             this.options = extend(options, this.defaults);
             this.underline();
         },
@@ -52,24 +71,30 @@ if (window.module !== undefined) {
                 s,
                 result,
                 string,
-                start = '<span class="underline-text" data-underline-margin="' + this.options.margin + '" data-underline-padding="' + this.options.padding + '">';
+                child,
+                e;
             for (i = 0; i < this.elements.length; i++) {
-                result = start;
-                string = this.elements[i].textContent;
+                e = this.elements[i];
+                string = e.textContent;
+                e.innerHTML = '';
+
+                result = '';
+                child = initChild('span', 'underline-text');
                 for (s in string) {
                     if (aInb(string[s], this.options.noUnderline)) {
-                        // we close the preceding texts' tag, encapsule the un-underlined letter
-                        // in a span with a data attr. containing the letter itself, so we can
-                        // handle different letters differently in css, and then open a new tag
-                        // for the next text
-                        result += '</span><span data-underline-letter="' + string[s] + '">' + string[s] + '</span>' +  start;
+                        e.appendChild( appendTextNode(child, result) );
+
+                        child = initChild('span', 'nounderline-text');
+                        e.appendChild( appendTextNode(child, string[s]) );
+
+                        result = '';
+                        child = initChild('span', 'underline-text');
                     }
                     else {
                         result += string[s];
                     }
                 }
-                result += '</span>';
-                this.elements[i].innerHTML = result;
+                e.appendChild( appendTextNode(child, result) );
             }
             return this;
         }
