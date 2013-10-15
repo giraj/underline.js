@@ -3,15 +3,22 @@
     <head>
         <title> Underline.js demo </title>
         <script type=text/javascript src=underline.js></script>
-        <link rel=stylesheet href=underline.css >
     </head>
     <body>
-        <h1 class='underline'>testing header</h1>
+        <h1 class='header-underline'>testing header - underline.js demo</h1>
 
-        <p> Here you can <span class='underline'>underline</span> specific words / texts. (this is tedious, i want custom web elements!)</p>
+        <p> Here you can <span class='p-underline'>underline</span> specific words / texts. (this is tedious, i want custom web elements!)</p>
 
         <script type=text/javascript>
-            var underline = new Underline('.underline');
+            var underline = new Underline('.header-underline', { 
+                                                           color: 'silver',
+                                                           width: 3
+                                                           });
+            var underline2 = new Underline('.p-underline', { 
+                                                           color: 'black',
+                                                           width: 2,
+                                                           margin: -5
+                                                           });
         </script>
     </body>
 </html>
