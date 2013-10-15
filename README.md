@@ -31,7 +31,7 @@ Example:
 ```javascript
 var underline = new Underline('.underline', {
     padding: 3,
-    color: cyan,
+    color: 'cyan',
     noUnderline: ['g', 'y', 'q', 'p'], // j looks awesome underlined!!
     margin: 3
 });
