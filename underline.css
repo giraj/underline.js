@@ -1,32 +1,29 @@
 /*
  * TODO
  *
- * find a way to inherit margin (dummy classes) so we can control :after from js
  * find a way to tell css to style g different from y (and so on)
  * be angry that css attr() only works for css content
  *
- *
- * colors? extend options?
- *
  */
 
-/*
-.underline-text {
-    text-decoration: underline;
-}
-*/
-
-.underline-text {
-    position: relative;
+body {
+    width: 650px;
+    margin: 0 auto;
 }
 
-.underline-text:after {
-    content: '';
-    position: absolute;
-    border-style: solid;
-    border-color: black;
-    border-width: 0 0 1px 0;
-    left: 0;
-    right: 0;
-    bottom: 0.1em; // basically margin from bottom (i.e. not text..)
+h1, p {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    font-size: 40pt;
+}
+
+p {
+    font-size: 18pt;
+}
+
+a {
+    color: teal;
+    text-decoration: none;
 }
