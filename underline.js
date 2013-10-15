@@ -65,7 +65,6 @@ if (window.module !== undefined) {
         },
 
         init: function (identifier, options) {
-            console.log(this.defaults.hasOwnProperty);
             this.elements = typeof identifier === 'string' ? document.querySelectorAll(identifier) : identifier;
             this.options = extend(options, this.defaults);
             this.id = Underline_id++;
