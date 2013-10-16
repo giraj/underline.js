@@ -12,15 +12,17 @@ body {
 }
 
 h1, p {
-    font-family: Arial, sans-serif;
+    font-family: 'Signika', Arial, sans-serif;
 }
 
 h1 {
     font-size: 40pt;
+    font-weight: 400;
 }
 
 p {
     font-size: 18pt;
+    font-weight: 300;
 }
 
 a {

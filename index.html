@@ -3,6 +3,7 @@
     <head>
         <title> Underline.js demo </title>
         <script type=text/javascript src=underline.js></script>
+        <link href='http://fonts.googleapis.com/css?family=Signika:400,300' rel='stylesheet' type='text/css'>
         <link rel=stylesheet href=underline.css >
     </head>
     <body>
@@ -14,9 +15,7 @@
 
         <p>However, for single-lined titles it works. It would be nice to be able to specify "spacing" or "padding" around certain letters, f.ex. the 'q' can be quite spacious from the left-side when using this. </p>
 
-        <p>The docs are the README on <a class='aunderline' href='http://github.com/jarlg/underline.js'>github</a>, so head over there 
-
-        <p>If there are any <span class='punderline'>questions</span> feel free to ask me on <a class='aunderline' href='http://github.com/jarlg'>@jarlg</a>.</p>
+        <p>The docs are the README on <a class='aunderline' href='http://github.com/jarlg/underline.js'>github</a>, so head over there. </p>
 
         <script type=text/javascript>
             var h_opts = {
@@ -26,12 +25,12 @@
             var underline = new Underline('.underline', h_opts);
 
             var p_opts = {
-                margin: -6
+                margin: -3
             };
             var underline2 = new Underline('.punderline', p_opts);
 
             var a_opts = {
-                margin: -6,
+                margin: -3,
                 width: 2,
                 noUnderline: ['j', 'g', '@'],
                 color: 'teal'
