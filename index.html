@@ -9,13 +9,13 @@
     <body>
         <h1 class='underline'>Underline.js</h1>
 
-        <p>Underline.js is used as a more flexible, customizable underline. With it, you can specify characters not to underline, as seen in the heading, and other features such as line-width, margin, color.</p>
+        <p>Underline.js is a more flexible underline for the web. It allows you to ignore characters, specify margins, stroke width and colors. More options could probably be extended.</p>
 
-        <p>This doesn't work really if the text spans several lines between "break-characters" (g, y, etc.) due to how this is done. Could be fixed, but I am <span class='punderline'>not working</span> on it. </p>
+        <p>Currently, the biggest issue is underlining text spanning more than one line, which doesn't work at the moment.</p>
 
-        <p>However, for single-lined titles it works. It would be nice to be able to specify "spacing" or "padding" around certain letters, f.ex. the 'q' can be quite spacious from the left-side when using this. </p>
+        <p>However, it works for single-line titles and other single-line purposes. An option I would like to add is to be able to specify "padding" around certain ignored characters; the 'q' can be quite spacious from the left-hand side, for example.</p>
 
-        <p>The docs are the README on <a class='aunderline' href='http://github.com/jarlg/underline.js'>github</a>, so head over there. </p>
+        <p>The docs are the README on <a class='aunderline' href='http://github.com/jarlg/underline.js'>github</a>, so head over there.</p>
 
         <script type=text/javascript>
             var h_opts = {
@@ -24,14 +24,9 @@
             };
             var underline = new Underline('.underline', h_opts);
 
-            var p_opts = {
-                margin: -3
-            };
-            var underline2 = new Underline('.punderline', p_opts);
-
             var a_opts = {
                 margin: -3,
-                width: 2,
+                width: 1,
                 noUnderline: ['j', 'g', '@'],
                 color: 'teal'
             };
