@@ -4,7 +4,7 @@ Underline.js is a fancy way to underline, removing the line under letters such a
 
 Using it is as easy as adding the js file to your project, specify target elements and then initializing underline.
 
-Demo page available at [jarlg.github.io/underline.js](http://jarlg.github.io/underline.js)
+Demo page available at [giraj.github.io/underline.js](https://giraj.github.io/underline.js)
 (See index.html for usage example)
 
 Specifying elements:
